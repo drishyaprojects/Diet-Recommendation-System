@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginPage" class="page">
+        <div class="split-left">
+            <h1>Welcome to Diet Recommendation System</h1>
+            <p>Your journey to a healthier lifestyle starts here.</p>
+        </div>
+        <div class="split-right">
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="javascript:void(0);" onclick="showPage('signupPage')">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="signupPage" class="page signup-page">
+        <div class="signup-form-container">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Username" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div id="homePage" class="page home-page">
+        <h2>Diet Recommendation System</h2><br>
+        <div class="diet-form-container">
+            <h2>User Details Form</h2>
+            <form id="dietForm">
+                <input type="number" id="age" placeholder="Age (years)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <select id="activityLevel" required>
+                    <option value="" disabled selected>Activity Level</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Get Recommendation</button>
+            </form>
+            <div id="result" class="result-section"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
